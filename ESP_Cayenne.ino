@@ -15,7 +15,6 @@ float t;
 DHT dht(DHTPIN, DHTTYPE);
 
 void setup() {
-
 	Serial.begin(115200);
   pinMode(D5, OUTPUT);
   pinMode(D6, OUTPUT);
@@ -24,7 +23,6 @@ void setup() {
 }
 
 void loop() {
-
   h = dht.readHumidity();
   t = dht.readTemperature();
   Cayenne.loop();
