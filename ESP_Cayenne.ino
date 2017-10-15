@@ -15,22 +15,24 @@ float t;
 DHT dht(DHTPIN, DHTTYPE);
 
 void setup() {
+	
 	Serial.begin(115200);
-  pinMode(D5, OUTPUT);
-  pinMode(D6, OUTPUT);
-  pinMode(D7, OUTPUT);
-  Cayenne.begin(username, password, clientID, ssid, wifiPassword);
+	pinMode(D5, OUTPUT);
+	pinMode(D6, OUTPUT);
+	pinMode(D7, OUTPUT);
+	Cayenne.begin(username, password, clientID, ssid, wifiPassword);
 }
 
 void loop() {
-  h = dht.readHumidity();
-  t = dht.readTemperature();
-  Cayenne.loop();
+	
+	h = dht.readHumidity();
+	t = dht.readTemperature();
+	Cayenne.loop();
 	if (millis() - lastMillis > 10000) {
 		lastMillis = millis();
 		Cayenne.virtualWrite(0, lastMillis);
-    Cayenne.celsiusWrite(1, t);
-    Cayenne.celsiusWrite(2, h);
+		Cayenne.celsiusWrite(1, t);
+		Cayenne.celsiusWrite(2, h);
 	}
 }
 
