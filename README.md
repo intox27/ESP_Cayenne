@@ -1,8 +1,2 @@
 # ESP_Cayenne
-A tutorial to use the ESP8266 
-* Part 1 : 
-* Part 2 :
-* Part 3 : 
-* Part 4 :   
-* Part 5 : 
-* Part 6 : 
+My Arduino Sketch for ESP8266 using CayenneMQTTESP8266 and DHT to be use with Cayenne Android app ...
